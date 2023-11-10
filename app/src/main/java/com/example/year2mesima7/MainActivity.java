@@ -51,13 +51,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void readFromFile(View view) {
         try {
-            // Initiates the variables using to read
             iS = this.getResources().openRawResource(resourceId);
             iSR = new InputStreamReader(iS);
             bR = new BufferedReader(iSR);
             sB = new StringBuilder();
-
-            // Reads from the file
             line = bR.readLine();
             while (line != null) {
                 sB.append(line+'\n');
